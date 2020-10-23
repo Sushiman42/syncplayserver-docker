@@ -1,6 +1,10 @@
 FROM python:3.7-alpine
 
+LABEL maintainer="sushiman42"
+
+#Bash is in here cause POSIX shell was throwing errors and I'm lazy
 RUN  apk add --no-cache --update --progress \
+        bash \ 
         musl \
         build-base \
         bash \
@@ -19,7 +23,8 @@ RUN pip install -q --no-cache-dir --upgrade pip && \
         cryptography
 
 RUN mkdir /app/syncplay -p
-RUN git clone https://github.com/Syncplay/syncplay /app/syncplay
+#Last working version was 1.6.7
+RUN git clone https://github.com/Syncplay/syncplay  /app/syncplay
 
 COPY ./entrypoint.sh /entrypoint.sh
 

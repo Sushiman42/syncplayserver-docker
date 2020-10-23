@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 args=""
 
@@ -37,10 +37,9 @@ if [ -n "$MAXUNAMELENGTH" ]; then
   echo Max Username Length set to $MAXUNAMELENGTH
 fi
 
-if [ -n "$MOTD" ]; then
-  echo "$MOTD" >> /app/syncplay/motd
-  args="$args --motd-file=/app/syncplay/motd"
-  echo MOTD set to $MOTD
+if [ "$MOTD" == "TRUE" ]; then
+  args="$args --motd-file=/motd.txt"
+  echo MOTD Enabled
 fi
 
 if [ -n "$PASSWORD" ]; then
@@ -52,6 +51,5 @@ if [ "$TLS" == "TRUE" ]; then
   args="$args --tls=/certs"
   echo Certs Enabled
 fi
-
 
 exec $(eval "./syncplayServer.py $args $@")

@@ -1,0 +1,34 @@
+version: "3"
+services:
+  syncplay:
+    image: sushiman42/syncplayserver-docker
+    restart: always
+    ports:
+      # Change this as well as PORT below for a nonstandard port mapping:
+      - 8999:8999
+    environment:
+      # Optional, remove for no salt:
+      - SALT=E1F53135E559C253
+      # Default is 8999, change above if needed:
+      - PORT=8999
+      # Optional, remove to disable server password:
+      - PASSWORD=CHANGEME
+      # Set to TRUE for 'room isolation':
+      - ISOLATE=FALSE
+      # Set to TRUE to disable the readiness indicator feature:
+      - DISABLEREADY=FALSE
+      # Set to TRUE to disable chat:
+      - DISABLECHAT=FALSE
+      # Optional, remove to disable chat char. limit:
+      - MAXCHATLENGTH=120
+      # Optional, remove to disable username char. limit:
+      - MAXUNAMELENGTH=20
+      # Optional, set to TRUE to use an MOTD file:
+      - MOTD=FALSE
+      # Optional, set to TRUE to use TLS CERTS:
+      - TLS=FALSE
+    volumes:
+      # Specify path to MOTD file if set to TRUE above:
+      - /path/to/motd.txt:/motd.txt
+      # Specify path to certs folder if set to TRUE above (visit letsencrypt.org for certs):
+      - /path/to/certs:/certs
