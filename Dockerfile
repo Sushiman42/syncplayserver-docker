@@ -31,5 +31,4 @@ RUN addgroup -g 800 -S syncplay && \
 USER syncplay
 
 WORKDIR /app/syncplay
-RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
