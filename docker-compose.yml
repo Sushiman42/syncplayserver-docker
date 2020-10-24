@@ -1,7 +1,7 @@
 version: "3"
 services:
   syncplay:
-    image: sushiman42/syncplayserver-docker
+    image: sushiman42/syncplayserver-docker:latest
     restart: always
     ports:
       # Change this as well as PORT below for a nonstandard port mapping:
