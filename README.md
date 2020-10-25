@@ -60,7 +60,7 @@ services:
 | `-e SALT=<salt string>` | Optional, remove for no salt |
 | `-e PORT=8999` | Default is 8999, change along with -p for nonstandard port mapping |
 | `-e PASSWORD=<password string>` | Optional, remove to disable server password |
-| `-e ISOLATE=FALSE` | Set to TRUE for **room isolation** |
+| `-e ISOLATE=FALSE` | Set to TRUE for *room isolation* |
 | `-e DISABLEREADY=FALSE` | Set to TRUE to disable the readiness indicator feature |
 | `-e DISABLECHAT=FALSE` | Set to TRUE to disable chat |
 | `-e MAXCHATLENGTH=<x>` | Optional, remove to disable chat char. limit |
