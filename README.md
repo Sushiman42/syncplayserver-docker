@@ -7,7 +7,7 @@ A docker image for running a [Syncplay](https://syncplay.pl/) server. Pulls the 
 ## Features
 * TLS Support
 * MOTD File Support (allows useage of ASCII art in the server MOTD, among other benefits)
-* Supports (almost) all syncplay server args
+* Supports (almost) all Syncplay server args
 
 ## Useage
 
