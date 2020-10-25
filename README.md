@@ -66,7 +66,7 @@ services:
 | `-e MAXCHATLENGTH=<x>` | Optional, remove to disable chat char. limit |
 | `-e MAXUNAMELENGTH=<x>` | Optional, remove to disable username char. limit |
 | `-e MOTD=FALSE` | Optional, set to TRUE to use an MOTD file |
-| `-e TLS=FALSE` | Optional, set to TRUE to use TLS CERTS |
+| `-e TLS=FALSE` | Optional, set to TRUE to use [TLS CERTS](https://github.com/Syncplay/syncplay/wiki/TLS-support) |
 | `-v /path/to/motd.txt:/motd.txt` | Specify path to MOTD file if set to TRUE above |
 | `-v /path/to/certs:/certs` | Specify path to certs folder if set to TRUE above (visit [letsencrypt](https://letsencrypt.org/) for certs) |
 
