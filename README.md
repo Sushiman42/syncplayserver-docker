@@ -4,6 +4,11 @@ A docker image for running a [Syncplay](https://syncplay.pl/) server. Pulls the 
 
 [![syncplay](https://raw.githubusercontent.com/Syncplay/syncplay/master/syncplay/resources/hicolor/128x128/apps/syncplay.png)](https://syncplay.pl/)
 
+## Features
+* TLS Support
+* MOTD File Support (allows useage of ASCII art in the server MOTD, among other benefits)
+* Supports (almost) all syncplay server args
+
 ## Useage
 
 ```
