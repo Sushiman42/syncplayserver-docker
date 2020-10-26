@@ -81,3 +81,5 @@ Only if I feel motivated
 * UID/GID support
 * Healthcheck implementation
 * ctrl-c sigkill when inside container
+
+Please submit any issues and feature requests and I'll do my best.
