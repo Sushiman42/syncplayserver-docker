@@ -23,8 +23,8 @@ RUN pip install -q --no-cache-dir --upgrade pip && \
         cryptography
 
 RUN mkdir /app/syncplay -p
-#Last working version was 1.6.7
-RUN git clone https://github.com/Syncplay/syncplay  /app/syncplay
+#Last working version was 1.6.6
+RUN git clone https://github.com/Syncplay/syncplay -b v1.6.6  /app/syncplay
 
 COPY ./entrypoint.sh /entrypoint.sh
 
