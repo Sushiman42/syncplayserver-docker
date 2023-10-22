@@ -1,4 +1,4 @@
-FROM python:3.7-alpine3.13
+FROM python:3.9.18-alpine3.18
 #temp change for upstream issue with libressl
 
 LABEL maintainer="sushiman42"
@@ -27,7 +27,7 @@ RUN pip install -q --no-cache-dir --upgrade pip && \
 
 RUN mkdir /app/syncplay -p
 #Last working version was 1.6.6
-RUN git clone https://github.com/Syncplay/syncplay -b v1.6.8  /app/syncplay
+RUN git clone https://github.com/Syncplay/syncplay -b v1.7.0  /app/syncplay
 
 COPY ./entrypoint.sh /entrypoint.sh
 
